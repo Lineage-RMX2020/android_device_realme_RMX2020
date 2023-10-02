@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/spark_RMX2020.mk
+    $(LOCAL_DIR)/lineage_RMX2020.mk
 
 COMMON_LUNCH_CHOICES := \
-    spark_RMX2020-user \
-    spark_RMX2020-userdebug \
-    spark_RMX2020-eng
+    lineage_RMX2020-user \
+    lineage_RMX2020-userdebug \
+    lineage_RMX2020-eng
