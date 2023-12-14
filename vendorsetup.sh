@@ -1,0 +1,14 @@
+# Kernel for RMX2020
+git clone --depth=1 https://github.com/ProjectElixir-Devices/kernel_realme_RMX2020 -b Rui2-OSS kernel/realme/RMX2020
+
+# Vendor Blobs for RMX2020
+git clone https://github.com/ProjectElixir-Devices/vendor_realme_RMX2020 -b Tiramisu-rui2 vendor/realme/RMX2020
+git clone https://github.com/ProjectElixir-Devices/vendor_realme_RMX2020-ims -b Tiramisu-rui2 vendor/realme/RMX2020-ims
+
+# Hardware OSS parts for RMX2020
+rm -rf hardware/mediatek
+git clone https://github.com/ArrowOS/android_hardware_mediatek -b arrow-13.1 hardware/mediatek
+
+# Mediatek Sepolicy_vndr
+rm -rf device/mediatek/sepolicy_vndr
+git clone https://github.com/ArrowOS/android_device_mediatek_sepolicy_vndr -b arrow-13.1 device/mediatek/sepolicy_vndr

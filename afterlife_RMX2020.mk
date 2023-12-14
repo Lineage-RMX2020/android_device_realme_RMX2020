@@ -12,11 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RMX2020/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Afterlife stuff.
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_RMX2020
+PRODUCT_NAME := afterlife_RMX2020
 PRODUCT_DEVICE := RMX2020
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX2020
@@ -26,7 +26,8 @@ PRODUCT_SYSTEM_MODEL := RMX2020
 PRODUCT_SYSTEM_NAME := RMX2020
 PRODUCT_SYSTEM_DEVICE := RMX2020
 
-# LineageOS additions
+# Afterlife additions
+AFTERLIFE_MAINTAINER := Rinto
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Build info
