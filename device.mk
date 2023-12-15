@@ -18,6 +18,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # IMS
 $(call inherit-product, vendor/realme/RMX2020-ims/RMX2020-ims.mk)
 
+$(call inherit-product-if-exists, packages/apps/V4APrebuilt/V4APrebuilt.mk)
+
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partition
@@ -389,6 +391,12 @@ PRODUCT_PACKAGES += \
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
+
+# Viper4Android-RE
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/app/viper/lib/soundfx/libv4a_re.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libv4a_re.so \
+    $(DEVICE_PATH)/app/viper/lib64/soundfx/libv4a_re.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libv4a_re.so \
+    $(DEVICE_PATH)/app/viper/etc/audio_effects.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_effects.conf
 
 # VNDK
 PRODUCT_COPY_FILES += \
